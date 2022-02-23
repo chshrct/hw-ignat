@@ -17,16 +17,16 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     const [error, setError] = useState<string>('')
 
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        const title = e.currentTarget.value
-        const wordRegExp = /^[a-zA-Zа-яА-Я]+$/
-        if (title === '') {
-            setError('')
+        const name = e.currentTarget.value
+        const nameRegExp = /^[a-zA-Zа-яА-Я]+$/  // имя состоит из одного слова и букв
+        if (name === '') { //пустая строка не ошибка, на случай, если пользователь еще не начал вводить значение или стер предыдущее
+            error && setError('')
             setName('')
-        } else if (wordRegExp.test(title)) {
-            setError('')
-            setName(title)
+        } else if (nameRegExp.test(name)) {
+            error && setError('')
+            setName(name)
         } else {
-            setError('Имя должно состоять из букв')
+            !error && setError('Имя должно состоять из букв')
             setName('')
         }
 
@@ -41,7 +41,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     const totalUsers = users.length
 
     const addUserEnter = (e: KeyboardEvent<HTMLInputElement>) => {
-        if (e.charCode === 13 && error === '' && name !== '') {
+        if (e.charCode === 13 && name) {
             addUser()
         }
     }
