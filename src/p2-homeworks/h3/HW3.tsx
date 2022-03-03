@@ -10,7 +10,7 @@ export type UserType = {
 
 // уровень работы с глобальными данными
 function HW3() {
-    const [users, setUsers] = useState<Array<UserType>>([])
+    const [users, setUsers] = useState<UserType[]>([])
 
     const addUserCallback = (name: string) => {
         setUsers([
@@ -25,7 +25,7 @@ function HW3() {
     return (
         <div>
             <hr/>
-            homeworks 3
+            <h4>homeworks 3</h4>
 
             {/*should work (должно работать)*/}
             <GreetingContainer users={users} addUserCallback={addUserCallback}/>

@@ -1,0 +1,43 @@
+.linkDef{
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+}
+.active{
+    font-weight: bold;
+    font-style: oblique;
+    color:#ffe26a;
+}
+.navBar{
+    height: 21px;
+    overflow: hidden;
+    transition: transform 0.5s;
+    transform: translateX(-200px);
+}
+.navBar:hover{
+    transform: translateX(0);
+}
+
+.navLinksAnchor{
+    display: inline-block;
+    margin-left: 10px;
+    width: 40px;
+    height: 21px;
+    border-radius: 5px;
+    background-color: #c7ddcc;
+    text-align: center;
+    font-weight: bold;
+    color: #16123f;
+}
+
+.error{
+    height: 90vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.error img{
+    max-height: 100%;
+}

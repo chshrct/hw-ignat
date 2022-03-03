@@ -1,5 +1,15 @@
-.someClass {
+.inputClass{
+    outline: none;
+    border: 1px solid black;
+    border-radius: 3px;
+    transition: transform 200ms;
+    background-color: #ffe26a;
+}
 
+.inputClass:focus{
+    box-shadow: 2px 3px grey;
+    transition: transform 200ms;
+    transform: scale(1.01);
 }
 
 .error {
@@ -7,7 +17,54 @@
     border-radius: 3px;
     outline:none;
 }
-
 .errWrap{
     height: 20px;
+    color: red;
+    font-weight: bold;
+}
+.greeting{
+    display:flex;
+    gap: 10px;
+    width: 250px;
+}
+.greeting span{
+    font-weight: bold ;
+}
+
+.button {
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 0.2rem;
+    padding: 0.3rem;
+    margin: 0;
+    text-decoration: none;
+    background: #abd699;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.button:hover,
+.button:focus {
+    background: #75c9b7;
+}
+
+.button:focus {
+    box-shadow: 2px 3px 2px  grey;
+    color: #ffe26a;
+    font-weight: bold;
+}
+
+.button:active {
+    transform: scale(0.97);
+}
+.button:disabled{
+    background-color: slategrey;
+    opacity: 0.5;
 }

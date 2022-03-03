@@ -1,3 +1,89 @@
-.someClass {
+.affairsWrapper{
+    display: inline-block;
+    background: #c7ddcc;
+    border-radius: 15px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.buttonsWrap{
+    display:flex;
+    justify-content: space-around;
+}
+
+.affair{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
 
 }
+.affairName{
+    display: inline-block;
+    width: 150px;
+    font-weight: bolder;
+}
+.affairPriority{
+    display: inline-block;
+    width: 150px;
+    font-weight: bolder;
+}
+
+
+.low{
+    color:green;
+}
+
+.middle{
+    color:orange;
+}
+
+.high{
+    color:red;
+}
+
+
+
+.button {
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 0.2rem;
+    padding: 0.3rem;
+    margin: 0;
+    text-decoration: none;
+    background: #abd699;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.filtered {
+    box-shadow: 2px 3px 2px  grey;
+    color: #ffe26a;
+    font-weight: bold;
+}
+
+
+.button:hover,
+.button:focus {
+    background: #75c9b7;
+}
+
+.button:focus {
+    box-shadow: 2px 3px 2px  grey;
+    color: #ffe26a;
+    font-weight: bold;
+}
+
+.button:active {
+    transform: scale(0.97);
+}
+.button:disabled{
+    opacity: 0.2;
+}
+

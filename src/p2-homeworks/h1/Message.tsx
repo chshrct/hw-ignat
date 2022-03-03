@@ -15,9 +15,7 @@ type msgPropsType ={
 function Message(props:msgPropsType){
     return (
         <div className={cl.wrapper}>
-            <div className={cl.avatar_wrapper}>
                 <img src={props.avatar} alt="avatar"/>
-            </div>
             <div className={cl.message_wrapper}>
                 <div className={cl.author}>{props.name}</div>
                 <div className={cl.message}>{props.message}</div>

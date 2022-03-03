@@ -1,11 +1,13 @@
 import React from 'react'
 import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
+import s from './Affairs.module.css'
 
 type AffairsPropsType = {
-    data: Array<AffairType>
+    data: AffairType[]
     setFilter: (filter:FilterType)=>void
     deleteAffairCallback: (_id: number)=>void
+    filter:FilterType
 }
 
 function Affairs(props: AffairsPropsType) {
@@ -23,14 +25,15 @@ function Affairs(props: AffairsPropsType) {
     const setLow = () => {props.setFilter('low')}
 
     return (
-        <div>
+        <div className={s.affairsWrapper}>
 
             {mappedAffairs}
-
-            <button onClick={setAll}>All</button>
-            <button onClick={setHigh}>High</button>
-            <button onClick={setMiddle}>Middle</button>
-            <button onClick={setLow}>Low</button>
+            <div className={s.buttonsWrap}>
+            <button className={`${s.button} ${props.filter==='all' && s.filtered}`} onClick={setAll}>All</button>
+            <button className={`${s.button} ${props.filter==='high' && s.filtered}`} onClick={setHigh}>High</button>
+            <button className={`${s.button} ${props.filter==='middle' && s.filtered}`} onClick={setMiddle}>Middle</button>
+            <button className={`${s.button} ${props.filter==='low' && s.filtered}`} onClick={setLow}>Low</button>
+            </div>
         </div>
     )
 }
