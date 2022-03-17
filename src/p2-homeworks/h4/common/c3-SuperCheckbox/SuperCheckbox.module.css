@@ -6,6 +6,7 @@ cursor: pointer;
     background-color: #ffe26a;
     border: 1px solid grey;
     border-radius: 3px;
+    transition: all ease-out 2s;
 }
 .checkbox:checked{
     background-image: url("./check.png") ;
@@ -13,8 +14,5 @@ cursor: pointer;
 }
 .checkbox:focus{
     box-shadow: 1px 1px grey;
-}
-
-.spanClassName {
-
+    transition: all ease-out 2s;
 }

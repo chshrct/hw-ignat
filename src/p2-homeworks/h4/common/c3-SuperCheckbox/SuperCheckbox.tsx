@@ -23,6 +23,8 @@ const SuperCheckbox: React.FC<SuperCheckboxPropsType> = (
         // сделайте так чтоб работал onChange и onChangeChecked
         onChangeChecked && onChangeChecked(e.currentTarget.checked)
         onChange && onChange(e)
+        const checkbox = e.currentTarget
+        setTimeout(()=>{checkbox.blur()},3000)
     }
 
     const finalInputClassName = `${s.checkbox} ${className ? className : ''}`
