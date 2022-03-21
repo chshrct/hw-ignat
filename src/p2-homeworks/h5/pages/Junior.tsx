@@ -1,14 +1,11 @@
 import HW7 from '../../h7/HW7'
+import HW8 from '../../h8/HW8'
 
 function Junior() {
     return (
         <div>
             <HW7 />
-            {/*<HW1/>*/}
-            {/*<HW2/>*/}
-            {/*<HW3/>*/}
-            {/*<HW4/>*/}
-            {/*<HW6/>*/}
+            <HW8/>
         </div>
     )
 }

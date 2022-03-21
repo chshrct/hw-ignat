@@ -1,0 +1,10 @@
+.hwWrap{
+    margin-left: 10px;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+
+}
