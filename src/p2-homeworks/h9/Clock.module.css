@@ -1,0 +1,9 @@
+.wrapp{
+    padding-left: 10px;
+}
+.clock_wrapp{
+    display: block;
+    padding: 10px;
+    height: 30px;
+    width: fit-content;
+}

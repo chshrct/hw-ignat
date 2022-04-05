@@ -1,50 +1,45 @@
-import React, {useState} from 'react'
+import React, { useState, MouseEvent } from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import s from './Clock.module.css'
 
 function Clock() {
     const [timerId, setTimerId] = useState<number>(0)
-    const [date, setDate] = useState<Date>()
+    const [date, setDate] = useState<Date>(new Date())
     const [show, setShow] = useState<boolean>(false)
 
     const stop = () => {
-        // stop
+        clearInterval(timerId)
     }
     const start = () => {
         stop()
-        const id: number = window.setInterval(() => {
-            // setDate
+        const id: number = +setInterval(() => {
+            setDate(new Date())
         }, 1000)
         setTimerId(id)
     }
 
-    const onMouseEnter = () => {
-        // show
+    const onMouseEnter = (e: MouseEvent<HTMLDivElement>) => {
+        setShow(true)
     }
-    const onMouseLeave = () => {
-        // close
+    const onMouseLeave = (e: MouseEvent<HTMLDivElement>) => {
+        setShow(false)
     }
 
-    const stringTime = 'Time' // fix with date
-    const stringDate = 'Date' // fix with date
+    const stringTime = date.toLocaleTimeString() // fix with date
+    const stringDate = date.toLocaleDateString() // fix with date
 
     return (
-        <div>
-            <div
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-            >
-                {stringTime}
-            </div>
-
-            {show && (
-                <div>
-                    {stringDate}
+        <div className={s.wrapp}>
+            <div className={s.clock_wrapp}>
+                <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                    {stringTime}
                 </div>
-            )}
+
+                {show && <div>{stringDate}</div>}
+            </div>
 
             <SuperButton onClick={start}>start</SuperButton>
             <SuperButton onClick={stop}>stop</SuperButton>
-
         </div>
     )
 }
