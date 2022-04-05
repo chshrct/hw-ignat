@@ -27,14 +27,14 @@ function HW10() {
     return (
         <div>
             <hr />
-            homeworks 10
+            <h4>homeworks 10</h4>
             {/*should work (должно работать)*/}
             {isLoading ? (
                 <div>
                     <img src={loader} alt="loader" />
                 </div>
             ) : (
-                <div>
+                <div style={{paddingLeft:'10px'}}>
                     <SuperButton onClick={setLoading}>set loading...</SuperButton>
                 </div>
             )}
