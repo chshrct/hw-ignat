@@ -1,23 +1,44 @@
-import React from 'react'
+import { Box, Slider } from '@mui/material'
+import * as React from 'react'
 
 type SuperDoubleRangePropsType = {
-    onChangeRange?: (value: [number, number]) => void
+    onChangeRange?: (event: Event, value: number | number[], activeThumb: number) => void
     value?: [number, number]
-    // min, max, step, disable, ...
+    min?: number
+    max?: number
+    step?: number
+    disable?: boolean
 }
 
-const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
-    {
-        onChangeRange, value,
-        // min, max, step, disable, ...
-    }
-) => {
+const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = ({
+    onChangeRange,
+    value,
+    min,
+    max,
+    step,
+    disable,
+}) => {
     // сделать самому, можно подключать библиотеки
 
     return (
-        <>
-            DoubleRange
-        </>
+        <Slider
+            sx={{
+                width: 125,
+                '& .MuiSlider-thumb': {
+                    width: 15,
+                    height: 15,
+                },
+                margin: '0 5px 0 5px',
+            }}
+            getAriaLabel={() => 'SuperDoubleRange'}
+            value={value}
+            onChange={onChangeRange}
+            min={min}
+            max={max}
+            step={step}
+            disabled={disable}
+            disableSwap
+        />
     )
 }
 
