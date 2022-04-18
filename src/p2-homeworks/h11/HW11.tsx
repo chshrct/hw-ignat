@@ -23,6 +23,7 @@ function HW11() {
                 <SuperRange
                     // сделать так чтоб value1 изменялось
                     onChangeRange={setValue1}
+                    value={value1}
                 />
             </div>
             <div>
