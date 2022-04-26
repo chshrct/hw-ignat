@@ -6,6 +6,7 @@ export enum ColorSchemeTypes {
     DEFAULT = 'default',
     DARK = 'dark',
     RED = 'red',
+    QWE = 'qwe'
 }
 
 type SetColorSchemeAction = ReturnType<typeof changeThemeC>
