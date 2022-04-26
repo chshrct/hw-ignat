@@ -6,10 +6,6 @@ function App() {
     return (
         <div className={s.App}>
             <div><h3>react homeworks:</h3></div>
-            {/*<HW1/>*/}
-            {/*<HW2/>*/}
-            {/*<HW3/>*/}
-            {/*<HW4/>*/}
             <HW5/>
 
         </div>

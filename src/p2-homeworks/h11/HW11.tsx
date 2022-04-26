@@ -16,9 +16,9 @@ function HW11() {
     return (
         <div>
             <hr />
-            homeworks 11
+            <h4>homeworks 11</h4>
             {/*should work (должно работать)*/}
-            <div>
+            <div style={{marginLeft:'10px'}}>
                 <span style={{ display: 'inline-block', width: '30px' }}>{value1}</span>
                 <SuperRange
                     // сделать так чтоб value1 изменялось
@@ -26,7 +26,7 @@ function HW11() {
                     value={value1}
                 />
             </div>
-            <div>
+            <div style={{marginLeft:'10px'}}>
                 <span style={{ display: 'inline-block', width: '30px' }}>{value1}</span>
                 <SuperDoubleRange
                     value={[value1, value2]}
