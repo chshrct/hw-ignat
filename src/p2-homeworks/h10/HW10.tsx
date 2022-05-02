@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
-import { loading, StateType } from './bll/loadingReducer'
+import { loading } from './bll/loadingReducer'
 import { AppStoreType } from './bll/store'
 import loader from './Capsule-Loading.svg'
 
